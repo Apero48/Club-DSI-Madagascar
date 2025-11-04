@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": "vite",
-  "buildCommand": "cd client && pnpm install --frozen-lockfile=false && pnpm build",
+  "buildCommand": "pnpm install --frozen-lockfile=false && pnpm build",
   "installCommand": "pnpm install --frozen-lockfile=false",
-  "outputDirectory": "client/dist"
+  "outputDirectory": "dist"
 }
