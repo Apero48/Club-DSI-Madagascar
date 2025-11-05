@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
           <a className="inline-flex items-center">
-            <img src={APP_LOGO} alt="Logo" className="h-14 w-14 md:h-16 md:w-16 rounded-full object-cover" />
+            <img src={APP_LOGO} alt="Logo" className="h-16 w-16 md:h-20 md:w-20 rounded-full object-cover" />
           </a>
         </Link>
 
@@ -38,7 +38,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="px-2 py-2">Membres</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white border shadow-md z-50">
+                <NavigationMenuContent className="bg-white border shadow-md z-50 data-[side=top]:slide-in-from-top-2 data-[side=bottom]:slide-in-from-bottom-2">
                   <div className="grid min-w-[220px] gap-1 p-2">
                     <NavigationMenuLink asChild>
                       <Link href="/membres"><a className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Annuaire des membres</a></Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="px-2 py-2">Actualités & Publications</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white border shadow-md z-50">
+                <NavigationMenuContent className="bg-white border shadow-md z-50 data-[side=top]:slide-in-from-top-2 data-[side=bottom]:slide-in-from-bottom-2">
                   <div className="grid min-w-[260px] gap-1 p-2">
                     <NavigationMenuLink asChild>
                       <Link href="/actualites/club"><a className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Actualités du Club</a></Link>
@@ -76,21 +76,20 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="px-2 py-2">Formations & Ateliers</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white border shadow-md z-50">
+                <NavigationMenuContent className="bg-white border shadow-md z-50 data-[side=top]:slide-in-from-top-2 data-[side=bottom]:slide-in-from-bottom-2">
                   <div className="grid min-w-[260px] gap-1 p-2">
                     <NavigationMenuLink asChild>
                       <Link href="/formations"><a className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Catalogue des formations</a></Link>
                     </NavigationMenuLink>
                     <a href="#" className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Webinaires & Masterclass</a>
                     <a href="#" className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Ateliers pratiques</a>
-                    <a href="#" className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Galerie photos & vidéos</a>
                   </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="px-2 py-2">Événements</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white border shadow-md z-50">
+                <NavigationMenuContent className="bg-white border shadow-md z-50 data-[side=top]:slide-in-from-top-2 data-[side=bottom]:slide-in-from-bottom-2">
                   <div className="grid min-w-[260px] gap-1 p-2">
                     <NavigationMenuLink asChild>
                       <Link href="/evenements/agenda"><a className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Agenda des événements</a></Link>
@@ -110,7 +109,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="px-2 py-2">Projets & Initiatives</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white border shadow-md z-50">
+                <NavigationMenuContent className="bg-white border shadow-md z-50 data-[side=top]:slide-in-from-top-2 data-[side=bottom]:slide-in-from-bottom-2">
                   <div className="grid min-w-[260px] gap-1 p-2">
                     <NavigationMenuLink asChild>
                       <Link href="/projets/collaboratifs"><a className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Projets collaboratifs</a></Link>
@@ -130,7 +129,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="px-2 py-2">Contact</NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-white border shadow-md z-50">
+                <NavigationMenuContent className="bg-white border shadow-md z-50 data-[side=top]:slide-in-from-top-2 data-[side=bottom]:slide-in-from-bottom-2">
                   <div className="grid min-w-[200px] gap-1 p-2">
                     <NavigationMenuLink asChild>
                       <Link href="/contact"><a className="block px-3 py-2 rounded hover:bg-gray-100 text-sm text-gray-800">Formulaire de contact</a></Link>
