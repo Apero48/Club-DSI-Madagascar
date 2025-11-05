@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import { APP_LOGO } from "@/const";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin, ArrowRight } from "lucide-react";
@@ -161,7 +162,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* About */}
             <div>
-              <h3 className="font-bold text-lg mb-4">Club DSI</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <img src={APP_LOGO} alt="Logo" className="h-10 w-10 rounded-full object-cover" />
+                <h3 className="font-bold text-lg">Club DSI</h3>
+              </div>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Plateforme nationale de concertation et de collaboration pour la promotion de la gouvernance et de l'innovation numérique à Madagascar.
               </p>
