@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
+import Footer from "./components/Footer";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Navbar from "@/components/Navbar";
 import ProtectedRoute from "@/components/ProtectedRoute";
@@ -111,27 +112,25 @@ function Router() {
 // NOTE: About Theme
 // - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
 //   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
-      <AuthProvider>
-        <ThemeProvider
-          defaultTheme="light"
-          // switchable
-        >
-          <TooltipProvider>
-            <Toaster />
-            <div className="flex flex-col min-h-screen">
-              <Navbar />
-              <main className="flex-1">
-                <Router />
-              </main>
+      <ThemeProvider defaultTheme="light">
+        <TooltipProvider>
+          <AuthProvider>
+            <div className="min-h-screen flex flex-col bg-background font-sans antialiased">
+              <ErrorBoundary>
+                <Navbar />
+                <div className="flex-1 pt-32">
+                  <Router />
+                </div>
+                <Footer />
+                <Toaster />
+              </ErrorBoundary>
             </div>
-          </TooltipProvider>
-        </ThemeProvider>
-      </AuthProvider>
+          </AuthProvider>
+        </TooltipProvider>
+      </ThemeProvider>
     </ErrorBoundary>
   );
 }

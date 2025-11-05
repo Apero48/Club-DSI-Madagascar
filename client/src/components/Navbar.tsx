@@ -114,18 +114,17 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-32 items-center">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <img
-                className="h-8 w-auto"
+                className="h-28 w-auto"
                 src={APP_LOGO}
                 alt="Club DSI Madagascar"
               />
-              <span className="ml-2 text-xl font-bold text-gray-900">DSI Madagascar</span>
             </Link>
           </div>
 
