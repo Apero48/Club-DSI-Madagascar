@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+// Navbar rendered globally in App.tsx
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -11,8 +11,6 @@ const events = [
 export default function EvenementsAgenda() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Navbar />
-
       <main className="flex-1">
         <div className="bg-blue-700 text-white py-12">
           <div className="max-w-7xl mx-auto px-4">

@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import { Card } from "@/components/ui/card";
 
 export default function GroupesTravail() {
@@ -9,7 +8,6 @@ export default function GroupesTravail() {
   ];
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Navbar />
       <main className="flex-1">
         <div className="bg-blue-700 text-white py-12">
           <div className="max-w-7xl mx-auto px-4">

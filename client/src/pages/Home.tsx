@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+// Navbar rendered globally in App.tsx
 import { APP_LOGO } from "@/const";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -8,8 +8,6 @@ import { Link } from "wouter";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Navbar />
-
       {/* Main Content */}
       <main className="flex-1">
         {/* Hero Banner */}
@@ -35,7 +33,7 @@ export default function Home() {
         {/* About Section */}
         <section className="max-w-7xl mx-auto px-4 py-12">
           <div className="bg-blue-50 rounded-lg p-8 border border-blue-200">
-            <h2 className="text-3xl font-bold text-blue-700 mb-4">Qui sommes-nous ?</h2>
+            <h2 className="text-3xl font-bold text-blue-700 mb-4">À propos</h2>
             <p className="text-gray-700 mb-4 leading-relaxed">
               Le Club des DSI de Madagascar est une association à but non lucratif qui réunit les dirigeants et responsables des systèmes d'information issus de l'administration publique, des entreprises privées et des établissements publics de Madagascar.
             </p>
@@ -47,6 +45,23 @@ export default function Home() {
                 En savoir plus <ArrowRight className="w-4 h-4" />
               </a>
             </Link>
+          </div>
+        </section>
+
+        {/* Objectifs du Club */}
+        <section className="max-w-7xl mx-auto px-4 py-6">
+          <div className="bg-white rounded-lg p-6 border border-gray-200">
+            <h3 className="text-2xl font-bold text-blue-700 mb-4">Les objectifs du Club</h3>
+            <ul className="space-y-2 text-gray-700 list-disc pl-5">
+              <li>Promouvoir la gouvernance numérique, la transformation digitale et l’excellence technologique au service du développement de Madagascar</li>
+              <li>Renforcer la contribution des DSI dans l’élaboration des stratégies des entreprises</li>
+              <li>Accompagner le développement continu des Systèmes d’Information à Madagascar</li>
+              <li>Développer des partenariats stratégiques avec les acteurs de la sphère informatique</li>
+              <li>Approfondir les échanges d’expériences entre les différents acteurs du domaine des TICs</li>
+              <li>Œuvrer pour adapter la formation dans le domaine des TICs aux besoins du marché de l’emploi</li>
+              <li>Contribuer aux travaux des commissions nationales chargées des programmes de mise à niveau du secteur</li>
+              <li>Organiser des forums et des rencontres avec les professionnels du domaine des TIC</li>
+            </ul>
           </div>
         </section>
 

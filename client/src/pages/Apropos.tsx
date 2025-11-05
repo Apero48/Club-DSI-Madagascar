@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
@@ -6,8 +5,6 @@ import { Link } from "wouter";
 export default function Apropos() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Navbar />
-
       <main className="flex-1">
         <div className="bg-blue-700 text-white py-12">
           <div className="max-w-7xl mx-auto px-4">

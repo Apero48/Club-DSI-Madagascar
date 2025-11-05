@@ -1,13 +1,11 @@
-import Navbar from "@/components/Navbar";
+// Navbar rendered globally in App.tsx
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
 export default function Presentation() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Navbar />
-
-      <main className="flex-1">
+  <main className="flex-1">
         <div className="bg-blue-700 text-white py-12">
           <div className="max-w-7xl mx-auto px-4">
             <h1 className="text-4xl font-bold">Présentation du Club DSI</h1>
