@@ -81,13 +81,13 @@ export default function Navbar() {
         {item.href ? (
           <Link
             href={item.href}
-            className={`flex items-center px-4 py-2 text-sm font-medium ${isActive(item.href) ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+            className={`flex items-center px-4 py-2 text-sm font-medium ${isActive(item.href) ? 'text-[var(--primary)]' : 'text-gray-700 hover:text-[var(--primary)]'}`}
           >
             {item.title}
           </Link>
         ) : (
           <button
-            className={`flex items-center px-4 py-2 text-sm font-medium ${activeMenu === item.title ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'}`}
+            className={`flex items-center px-4 py-2 text-sm font-medium ${activeMenu === item.title ? 'text-[var(--primary)]' : 'text-gray-700 hover:text-[var(--primary)]'}`}
           >
             {item.title}
             <ChevronDown className="ml-1 h-4 w-4" />
@@ -102,7 +102,7 @@ export default function Navbar() {
               <Link
                 key={subIndex}
                 href={subItem.href}
-                className={`block px-4 py-2 text-sm ${isActive(subItem.href) ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-50'}`}
+                className={`block px-4 py-2 text-sm ${isActive(subItem.href) ? 'bg-[var(--accent)] text-[var(--primary)]' : 'text-[var(--foreground)] hover:bg-[var(--accent)]'}`}
               >
                 {subItem.title}
               </Link>
@@ -114,17 +114,19 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-32 items-center">
+    <header className="fixed w-full bg-white text-white z-50 shadow-md h-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex justify-between items-center h-full">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="flex items-center">
-              <img
-                className="h-28 w-auto"
-                src={APP_LOGO}
-                alt="Club DSI Madagascar"
-              />
+          <div className="flex-shrink-0">
+            <Link href="/" className="block">
+              <div className="w-[150px] h-[120px] flex items-center justify-center overflow-hidden">
+                <img
+                  src={APP_LOGO}
+                  alt="DSI Madagascar"
+                  className="w-[140px] h-[140px] object-contain"
+                />
+              </div>
             </Link>
           </div>
 
@@ -134,7 +136,9 @@ export default function Navbar() {
             
             {/* User Icon */}
             <div className="ml-4 flex items-center">
-              <button className="p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none">
+              <button
+                className="p-1 rounded-full text-[var(--header-footer-foreground)] hover:text-[var(--primary)] focus:outline-none"
+              >
                 <User className="h-6 w-6" />
               </button>
             </div>
@@ -144,7 +148,7 @@ export default function Navbar() {
           <div className="-mr-2 flex items-center md:hidden">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-[var(--header-footer-foreground)] hover:bg-[var(--primary)] hover:bg-opacity-20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[var(--primary)]"
             >
               {mobileOpen ? (
                 <X className="block h-6 w-6" />
@@ -164,8 +168,12 @@ export default function Navbar() {
               <div key={index} className="border-b border-gray-200">
                 {item.href ? (
                   <Link
-                    href={item.href}
-                    className={`block pl-3 pr-4 py-2 text-base font-medium ${isActive(item.href) ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:bg-gray-50'}`}
+                    href={item.href || "#"}
+                    className={`px-3 py-2 rounded-md text-sm font-medium ${
+                      isActive(item.href)
+                        ? "text-[var(--primary-foreground)] bg-[var(--primary)]"
+                        : "text-[var(--header-footer-foreground)] hover:bg-[var(--primary)] hover:bg-opacity-20"
+                    }`}
                     onClick={() => setMobileOpen(false)}
                   >
                     {item.title}
@@ -174,7 +182,11 @@ export default function Navbar() {
                   <div>
                     <button
                       onClick={() => setActiveMenu(activeMenu === item.title ? null : item.title)}
-                      className="w-full flex justify-between items-center pl-3 pr-4 py-2 text-base font-medium text-gray-600 hover:bg-gray-50"
+                      className={`flex items-center px-3 py-2 rounded-md text-sm font-medium ${
+                        activeMenu === item.title
+                          ? "text-[var(--primary-foreground)] bg-[var(--primary)]"
+                          : "text-[var(--header-footer-foreground)] hover:bg-[var(--primary)] hover:bg-opacity-20"
+                      }`}
                     >
                       {item.title}
                       <ChevronDown className={`h-4 w-4 transform ${activeMenu === item.title ? 'rotate-180' : ''}`} />
@@ -185,7 +197,7 @@ export default function Navbar() {
                           <Link
                             key={subIndex}
                             href={subItem.href}
-                            className="block pl-3 pr-4 py-2 text-sm text-gray-600 hover:bg-gray-50"
+                            className="block px-4 py-2 text-sm text-[var(--header-footer-foreground)] hover:bg-[var(--primary)] hover:bg-opacity-10"
                             onClick={() => setMobileOpen(false)}
                           >
                             {subItem.title}
@@ -200,6 +212,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </nav>
+    </header>
   );
 }
