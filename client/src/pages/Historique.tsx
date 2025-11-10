@@ -73,7 +73,7 @@ export default function Historique() {
                     description: 'Élection du premier bureau exécutif et mise en place de la gouvernance du Club.' 
                   },
                   { 
-                    year: '2025', 
+                    year: '2026', 
                     title: 'Premier Forum Annuel', 
                     description: 'Organisation du premier forum national des DSI avec plus de 200 participants, sous le thème "La transformation numérique au service du développement économique de Madagascar".' 
                   },
