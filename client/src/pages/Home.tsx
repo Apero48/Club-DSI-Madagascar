@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Main Content */}
-      <main className="flex-1 pt-32">
+      <main className="flex-1">
         {/* Hero Banner */}
         <div className="w-full bg-gradient-to-r from-[var(--header-footer)] to-[var(--primary)] text-white py-20">
           <div className="max-w-7xl mx-auto px-4 text-center">
