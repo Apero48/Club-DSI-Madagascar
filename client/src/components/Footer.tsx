@@ -1,5 +1,6 @@
 import { APP_LOGO } from "@/const";
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Footer() {
   return (
@@ -21,10 +22,10 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4 text-white">Navigation</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="/" className="text-[var(--header-footer-foreground)] text-opacity-80 hover:text-opacity-100 hover:text-[var(--primary)] transition">Accueil</a></li>
-              <li><a href="/apropos" className="text-[var(--header-footer-foreground)] text-opacity-80 hover:text-opacity-100 hover:text-[var(--primary)] transition">À propos</a></li>
-              <li><a href="/membres" className="text-[var(--header-footer-foreground)] text-opacity-80 hover:text-opacity-100 hover:text-[var(--primary)] transition">Membres</a></li>
-              <li><a href="/evenements" className="text-[var(--header-footer-foreground)] text-opacity-80 hover:text-opacity-100 hover:text-[var(--primary)] transition">Événements</a></li>
+              <li><Link href="/" className="text-[var(--header-footer-foreground)] text-opacity-80 hover:text-opacity-100 hover:text-[var(--primary)] transition">Accueil</Link></li>
+              <li><Link href="/apropos" className="text-[var(--header-footer-foreground)] text-opacity-80 hover:text-opacity-100 hover:text-[var(--primary)] transition">À propos</Link></li>
+              <li><Link href="/membres" className="text-[var(--header-footer-foreground)] text-opacity-80 hover:text-opacity-100 hover:text-[var(--primary)] transition">Membres</Link></li>
+              <li><Link href="/evenements" className="text-[var(--header-footer-foreground)] text-opacity-80 hover:text-opacity-100 hover:text-[var(--primary)] transition">Événements</Link></li>
             </ul>
           </div>
 

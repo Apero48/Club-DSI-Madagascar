@@ -43,6 +43,13 @@ export default function Historique() {
           </div>
 
           <div className="mt-16">
+            <div className="bg-blue-50 p-6 rounded-lg mb-12 border border-blue-100">
+              <h3 className="text-xl font-semibold text-[var(--primary)] mb-3">Notre parcours en quelques dates clés</h3>
+              <p className="text-[var(--foreground)]">
+                Découvrez les moments forts qui ont marqué l'évolution du Club des DSI de Madagascar depuis sa création en 2025.
+                Notre engagement pour l'excellence et l'innovation dans le domaine des systèmes d'information à Madagascar.
+              </p>
+            </div>
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-[var(--header-footer)] mb-4">Notre Parcours</h2>
               <div className="w-24 h-1 bg-[var(--primary)] mx-auto"></div>
@@ -55,11 +62,36 @@ export default function Historique() {
               {/* Événements */}
               <div className="space-y-12">
                 {[
-                  { year: '2020', title: 'Création du Club des DSI', description: 'Lancement officiel avec 20 membres fondateurs' },
-                  { year: '2021', title: 'Premier forum annuel', description: 'Plus de 100 participants à notre premier événement majeur' },
-                  { year: '2022', title: 'Programmes de mentorat', description: 'Mise en place des premiers programmes de mentorat' },
-                  { year: '2023', title: 'Partenariats internationaux', description: 'Établissement de collaborations stratégiques' },
-                  { year: '2024', title: 'Plateforme collaborative', description: 'Lancement de notre espace membre en ligne' }
+                  { 
+                    year: '2025', 
+                    title: 'Création du Club des DSI', 
+                    description: 'Lancement officiel du Club des DSI de Madagascar avec 30 membres fondateurs issus des plus grandes entreprises et institutions du pays.' 
+                  },
+                  { 
+                    year: '2025', 
+                    title: 'Premier Conseil d\'Administration', 
+                    description: 'Élection du premier bureau exécutif et mise en place de la gouvernance du Club.' 
+                  },
+                  { 
+                    year: '2025', 
+                    title: 'Premier Forum Annuel', 
+                    description: 'Organisation du premier forum national des DSI avec plus de 200 participants, sous le thème "La transformation numérique au service du développement économique de Madagascar".' 
+                  },
+                  { 
+                    year: '2026', 
+                    title: 'Lancement des groupes de travail', 
+                    description: 'Mise en place des premiers groupes de travail thématiques : Cybersécurité, Cloud & Infrastructures, et Transformation Digitale.' 
+                  },
+                  { 
+                    year: '2026', 
+                    title: 'Partenariats stratégiques', 
+                    description: 'Signature de conventions de partenariat avec des institutions académiques et des acteurs majeurs du numérique à l\'international.' 
+                  },
+                  { 
+                    year: '2026', 
+                    title: 'Deuxième Forum Annuel', 
+                    description: 'Deuxième édition du forum avec une participation record et le lancement de la première édition des Trophées de l\'Innovation Numérique.' 
+                  }
                 ].map((event, index) => (
                   <div key={event.year} className="relative">
                     {/* Point sur la timeline */}

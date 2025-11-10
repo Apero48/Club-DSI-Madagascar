@@ -40,6 +40,7 @@ import ActualitesAteliers from "./pages/ActualitesAteliers";
 import ActualitesDSIFutur from "./pages/ActualitesDSIFutur";
 import GroupesTravail from "./pages/GroupesTravail";
 import InnovationTransformation from "./pages/InnovationTransformation";
+import Apropos from "./pages/Apropos";
 
 function Router() {
   return (
@@ -85,6 +86,9 @@ function Router() {
       <Route path="/adhesion" component={Adhesion} />
       <Route path="/mentor-reseau" component={MentorReseau} />
       <Route path="/mentorat" component={MentorReseau} />
+      <Route path="/apropos" component={Apropos} />
+      <Route path="/membres" component={Membres} />
+      <Route path="/evenements" component={Evenements} />
       
       {/* Routes protégées */}
       <Route path="/espace-membre">
