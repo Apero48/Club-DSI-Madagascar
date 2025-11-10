@@ -20,12 +20,16 @@ export default function Home() {
               Un réseau d'experts au cœur de la transformation digitale malgache
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-[var(--header-footer)] hover:bg-gray-100 hover:text-[var(--header-footer)]">
-                Devenir membre
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:bg-opacity-10">
-                Découvrir nos événements
-              </Button>
+              <Link href="/adhesion">
+                <Button size="lg" className="bg-white text-[var(--header-footer)] hover:bg-gray-100 hover:text-[var(--header-footer)]">
+                  Devenir membre
+                </Button>
+              </Link>
+              <Link href="/evenements">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:bg-opacity-10">
+                  Découvrir nos événements
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

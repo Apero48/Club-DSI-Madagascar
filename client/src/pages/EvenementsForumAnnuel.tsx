@@ -41,21 +41,69 @@ const EvenementsForumAnnuel: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-white">
       <main className="flex-1 pt-32">
         {/* Hero Section */}
-        <div className="w-full bg-gradient-to-r from-[var(--header-footer)] to-[var(--primary)] text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Forum Annuel des DSI</h1>
-            <p className="text-xl md:text-2xl mb-8 text-white text-opacity-90">
-              L'événement phare du Club des DSI de Madagascar
+        <div className="relative w-full bg-gradient-to-r from-[var(--header-footer)] to-[var(--primary)] text-white py-24 overflow-hidden">
+          {/* Effet de fond animé */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-[url('/images/patterns/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 text-center z-10">
+            <div className="inline-block bg-white/10 backdrop-blur-sm px-4 py-1 rounded-full mb-6">
+              <span className="text-sm font-medium text-white/90">Événement à venir • 15-16 Novembre 2024</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              Forum Annuel des DSI
+            </h1>
+            
+            <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto">
+              L'événement phare du Club des DSI de Madagascar réunissant les acteurs majeurs du numérique
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-[var(--header-footer)] hover:bg-gray-100 hover:text-[var(--header-footer)]">
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a 
+                href="#inscription" 
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-[var(--header-footer)] hover:bg-gray-100 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
                 S'inscrire à la prochaine édition
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              </a>
+              
+              <a 
+                href="#programme" 
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white/10 font-semibold rounded-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
                 Voir le programme
-              </Button>
+              </a>
+            </div>
+            
+            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                <Users2 className="w-8 h-8 mx-auto mb-2" />
+                <p className="text-2xl font-bold">500+</p>
+                <p className="text-sm opacity-80">Participants</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                <Mic className="w-8 h-8 mx-auto mb-2" />
+                <p className="text-2xl font-bold">30+</p>
+                <p className="text-sm opacity-80">Intervenants</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                <Award className="w-8 h-8 mx-auto mb-2" />
+                <p className="text-2xl font-bold">10+</p>
+                <p className="text-sm opacity-80">Partenaires</p>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-xl">
+                <Clock className="w-8 h-8 mx-auto mb-2" />
+                <p className="text-2xl font-bold">2</p>
+                <p className="text-sm opacity-80">Jours d'échanges</p>
+              </div>
             </div>
           </div>
+          
+          {/* Vague décorative en bas de la section héro */}
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-white [mask-image:linear-gradient(to_right,transparent,white,transparent)]"></div>
         </div>
 
         {/* À propos du Forum */}
@@ -93,51 +141,151 @@ const EvenementsForumAnnuel: React.FC = () => {
           </div>
         </section>
 
-        {/* Prochaine édition */}
-        <section className="bg-gray-50 py-16">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-[var(--header-footer)] mb-12">Prochaine Édition 2025</h2>
+        {/* Section Inscription */}
+        <section id="inscription" className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-[var(--header-footer)] mb-4">Inscription au Forum 2025</h2>
+              <div className="w-20 h-1 bg-[var(--primary)] mx-auto mb-6"></div>
+              <p className="text-xl text-[var(--foreground)] max-w-3xl mx-auto">
+                Réservez dès maintenant votre place pour le plus grand événement du numérique à Madagascar
+              </p>
+            </div>
             
-            <div className="bg-white rounded-xl shadow-sm border border-[var(--border)] overflow-hidden max-w-4xl mx-auto">
-              <div className="h-64 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] flex items-center justify-center text-white">
-                <div className="text-center p-6">
-                  <div className="text-4xl font-bold mb-2">À venir</div>
-                  <p className="text-xl">Informations à venir prochainement</p>
-                </div>
-              </div>
-              <div className="p-8">
-                <div className="grid md:grid-cols-2 gap-8 mb-8">
+            <Card className="p-8 max-w-3xl mx-auto">
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-xl font-semibold text-[var(--header-footer)] mb-4">Informations pratiques</h3>
-                    <ul className="space-y-3">
-                      <li className="flex items-start">
-                        <Calendar className="w-5 h-5 text-[var(--primary)] mr-2 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="font-medium">Date:</span> À annoncer
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <MapPin className="w-5 h-5 text-[var(--primary)] mr-2 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="font-medium">Lieu:</span> À annoncer
-                        </div>
-                      </li>
-                      <li className="flex items-start">
-                        <Users className="w-5 h-5 text-[var(--primary)] mr-2 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="font-medium">Participants attendus:</span> 400+
-                        </div>
-                      </li>
-                    </ul>
+                    <label htmlFor="nom" className="block text-sm font-medium text-gray-700 mb-1">Nom complet *</label>
+                    <input type="text" id="nom" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-[var(--header-footer)] mb-4">Thématique 2025</h3>
-                    <div className="bg-[var(--accent)] p-4 rounded-lg">
-                      <p className="text-lg font-medium text-[var(--header-footer)]">À annoncer</p>
-                      <p className="text-[var(--foreground)] mt-2">Restez à l'écoute pour découvrir le thème de l'édition 2025 !</p>
+                    <label htmlFor="entreprise" className="block text-sm font-medium text-gray-700 mb-1">Entreprise *</label>
+                    <input type="text" id="entreprise" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)]" />
+                  </div>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email professionnel *</label>
+                    <input type="email" id="email" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)]" />
+                  </div>
+                  <div>
+                    <label htmlFor="telephone" className="block text-sm font-medium text-gray-700 mb-1">Téléphone *</label>
+                    <input type="tel" id="telephone" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)]" />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="type-participation" className="block text-sm font-medium text-gray-700 mb-1">Type de participation *</label>
+                  <select id="type-participation" required className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[var(--primary)] focus:border-[var(--primary)]">
+                    <option value="">Sélectionnez une option</option>
+                    <option value="individuel">Participation individuelle (200 000 Ar)</option>
+                    <option value="entreprise-5">Pack Entreprise - 5 personnes (800 000 Ar)</option>
+                    <option value="etudiant">Tarif Étudiant (100 000 Ar)</option>
+                    <option value="orateur">Intervenant/Conférencier</option>
+                  </select>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex items-center h-5">
+                    <input id="newsletter" type="checkbox" className="h-4 w-4 text-[var(--primary)] focus:ring-[var(--primary)] border-gray-300 rounded" />
+                  </div>
+                  <div className="ml-3 text-sm">
+                    <label htmlFor="newsletter" className="font-medium text-gray-700">Je souhaite recevoir la newsletter du Club DSI</label>
+                  </div>
+                </div>
+                
+                <div className="pt-2">
+                  <Button type="submit" className="w-full bg-[var(--primary)] hover:bg-[var(--primary-dark)] py-6 text-lg">
+                    Valider mon inscription
+                  </Button>
+                </div>
+                
+                <p className="text-sm text-gray-500 text-center mt-4">
+                  Pour toute demande spécifique, contactez-nous à <a href="mailto:forum@clubdsi.mg" className="text-[var(--primary)] hover:underline">forum@clubdsi.mg</a>
+                </p>
+              </form>
+            </Card>
+          </div>
+        </section>
+        
+        {/* Section Programme */}
+        <section id="programme" className="py-16 bg-gray-50">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-[var(--header-footer)] mb-4">Programme du Forum 2025</h2>
+              <div className="w-20 h-1 bg-[var(--primary)] mx-auto mb-6"></div>
+              <p className="text-xl text-[var(--foreground)] max-w-3xl mx-auto">
+                Découvrez le programme détaillé des deux jours de conférences et d'ateliers
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-sm border border-[var(--border)] overflow-hidden">
+              <div className="border-b border-gray-200">
+                <nav className="flex -mb-px" aria-label="Tabs">
+                  <button className="w-1/2 py-4 px-1 text-center border-b-2 font-medium text-sm border-[var(--primary)] text-[var(--primary)]">
+                    Jour 1 - 15 Novembre 2024
+                  </button>
+                  <button className="w-1/2 py-4 px-1 text-center border-b-2 font-medium text-sm border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                    Jour 2 - 16 Novembre 2024
+                  </button>
+                </nav>
+              </div>
+              
+              <div className="p-6">
+                <div className="space-y-8">
+                  {/* Événement 1 */}
+                  <div className="flex">
+                    <div className="flex-shrink-0 w-32">
+                      <div className="text-lg font-bold text-[var(--primary)]">08:30</div>
+                      <div className="text-sm text-gray-500">- 09:15</div>
                     </div>
-                    <Button className="mt-6 w-full" size="lg">
-                      Être informé du programme
+                    <div className="ml-4 flex-1">
+                      <h3 className="text-xl font-semibold text-[var(--header-footer)]">Accueil des participants</h3>
+                      <p className="text-gray-600">Café d'accueil et enregistrement</p>
+                      <div className="flex items-center mt-2 text-sm text-gray-500">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        Hall principal
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Événement 2 */}
+                  <div className="flex">
+                    <div className="flex-shrink-0 w-32">
+                      <div className="text-lg font-bold text-[var(--primary)]">09:30</div>
+                      <div className="text-sm text-gray-500">- 10:30</div>
+                    </div>
+                    <div className="ml-4 flex-1">
+                      <h3 className="text-xl font-semibold text-[var(--header-footer)]">Cérémonie d'ouverture</h3>
+                      <p className="text-gray-600">Discours d'ouverture et mot des officiels</p>
+                      <div className="flex items-center mt-2 text-sm text-gray-500">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        Salle plénière
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Événement 3 */}
+                  <div className="flex">
+                    <div className="flex-shrink-0 w-32">
+                      <div className="text-lg font-bold text-[var(--primary)]">10:45</div>
+                      <div className="text-sm text-gray-500">- 12:15</div>
+                    </div>
+                    <div className="ml-4 flex-1">
+                      <h3 className="text-xl font-semibold text-[var(--header-footer)]">Table ronde : L'IA au service de la transformation numérique</h3>
+                      <p className="text-gray-600">Avec des experts internationaux et locaux du domaine de l'IA</p>
+                      <div className="flex items-center mt-2 text-sm text-gray-500">
+                        <MapPin className="w-4 h-4 mr-1" />
+                        Salle plénière
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center mt-10">
+                    <Button variant="outline" className="border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--accent)]">
+                      Télécharger le programme complet (PDF)
                     </Button>
                   </div>
                 </div>
