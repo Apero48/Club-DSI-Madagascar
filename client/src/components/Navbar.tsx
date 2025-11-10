@@ -78,15 +78,15 @@ export default function Navbar() {
 
   return (
     <header className="fixed w-full bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="block">
               <img
                 src={APP_LOGO}
                 alt="DSI Madagascar"
-                className="h-12 w-auto"
+                className="h-16 w-auto hover:opacity-90 transition-opacity"
               />
             </Link>
           </div>
